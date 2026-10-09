@@ -91,7 +91,7 @@ int score(const uint64_t *times, const int *touched, int n,
 int main(void) {
 
     FILE *file = fopen("output_ff.csv", "w");
-    FILE *file_txt = fopen("ff.txt", "w");
+    FILE *file_txt = fopen("output_ff.txt", "w");
 
     if (file == NULL) {
         printf("Failed to open file output.csv\n");
