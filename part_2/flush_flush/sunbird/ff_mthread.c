@@ -13,7 +13,7 @@
 
 volatile char target = 85; //target byte that we are trying to observe with ff
 
-#define N      1000  //samples and warmup
+#define N      10000  //samples and warmup
 #define WARMUP  1000  
 
 
@@ -100,7 +100,7 @@ void *victim(void *arg) {
 
         seed ^= seed << 13; seed ^= seed >> 17; seed ^= seed << 5;
         int touch = seed & 1; // flip a coin -- attacker doesn't know this
-        if (touch) { volatile char c = target; (void)c; }
+        if (touch) { volatile char c = target; (void)c; } //bring in target into shared space if touch == true
 
         pthread_barrier_wait(&victim_done); // signal that victim has acted and now attacker can time
 
@@ -145,8 +145,8 @@ static void run_phase(uint64_t *times, int *touched, uint32_t victim_seed) {
 
 int main(void) {
 
-    FILE *file     = fopen("output_ff.csv", "w"); //set output files (data raw csv and measured txt)
-    FILE *file_txt = fopen("output_ff.txt", "w");
+    FILE *file     = fopen("output_ff_multi.csv", "w"); //set output files (data raw csv and measured txt)
+    FILE *file_txt = fopen("output_ff_multi.txt", "w");
 
     if (file == NULL) { //error collection for issue faced
         printf("Failed to open file output_ff.csv\n");
