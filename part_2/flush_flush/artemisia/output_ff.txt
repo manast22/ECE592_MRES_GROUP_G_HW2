@@ -1,0 +1,5 @@
+TRAINING METRICS: median cached=262  median uncached=390  threshold=326  cached_is_slower=0
+
+train accuracy: 9997/10000 = 100.0%
+test accuracy:  9944/10000 = 99.4%
+train time: 64638130, test time: 9613356
