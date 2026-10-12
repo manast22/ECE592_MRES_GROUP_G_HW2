@@ -14,7 +14,7 @@
 volatile char target = 85; //target byte that we are trying to observe with ff
 
 #define N      10000  //samples and warmup
-#define WARMUP  1000  
+#define WARMUP  10000  
 
 
 static pthread_barrier_t round_start; //barriers to ensure ordering of threads
