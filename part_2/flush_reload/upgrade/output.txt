@@ -1,2 +1,2 @@
-Average hit: 276	Average miss: 470
-Correct: 13427	Wrong: 6573	Accuracy: 0.671350
+Average hit: 41	Average miss: 181
+Correct: 15341	Wrong: 4659	Accuracy: 0.767050
