@@ -90,8 +90,8 @@ int score(const uint64_t *times, const int *touched, int n,
 
 int main(void) {
 
-    FILE *file = fopen("output_ff.csv", "w");
-    FILE *file_txt = fopen("output_ff.txt", "w");
+    FILE *file = fopen("output_ff_cal.csv", "w");
+    FILE *file_txt = fopen("output_ff_cal.txt", "w");
 
     if (file == NULL) {
         printf("Failed to open file output.csv\n");
@@ -102,7 +102,7 @@ int main(void) {
     fprintf(file, "latency,prediction,actual\n");
 
 
-    const int N = 10000, WARMUP = 1000; //set training samples and test samples
+    const int N = 10000, WARMUP = 10000; //set training samples and test samples
     uint64_t train_start = __rdtsc();
     uint64_t train_times[N]; int train_touched[N]; //est data sets for training times and predetermined cached/uncached
     collect(train_times, train_touched, N, WARMUP); //set these data sets for usage
