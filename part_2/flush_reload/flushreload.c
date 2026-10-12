@@ -24,6 +24,7 @@ unsigned long probe (char * adrs) {
         " rdtsc             \n"
         " subl %%esi, %%eax \n"
         " clflush 0(%1)     \n"
+        " mfence            \n"
         : "=a" (time)
         : "c" (adrs)
         : "%esi", "%edx", "memory");
@@ -86,9 +87,10 @@ int main(void) {
 
 
     printf("Hit Median: %lu\tMiss Median: %lu\n", hit_med, miss_med);
+    printf("Hit 90 high: %lu\tMiss 10 low: %lu\n", hits[nwarm - (hit_count/10)], misses[nwarm - 9*(miss_count/10)]);
 
 
-    unsigned long threshhold = (miss_med + hit_med)/2;
+    unsigned long threshhold = (hits[nwarm - (hit_count/10)] + misses[nwarm - 9*(miss_count/10)])/2;
 
     printf("Threshhold: %lu\n", threshhold);
 
@@ -121,6 +123,9 @@ int main(void) {
             times[i] = probe(target);
         }
     }
+
+    hit_count = 0;
+    miss_count = 0;
 
     long correct = 0;
     long wrong = 0;
