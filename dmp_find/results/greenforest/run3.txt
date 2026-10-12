@@ -1,0 +1,47 @@
+timer overhead : 98 cyc
+hit   median/95p : 0 / 24 cyc
+miss  median/5p : 61 / 47 cyc
+=> threshold set to 35 cyc (between hit_95p and miss_5p)
+random-line miss median/5p : 57 / 49 cyc
+sw-prefetch  cached-after-flush: 100.00%
+sw-prefetch-t2 cached-after-flush: 100.00%
+pointerlike  cached-after-flush:   3.23%
+garbage      cached-after-flush:   0.01%
+
+distance  pointerlike  garbage
+       1       40.30%    0.15%
+       2        2.89%    0.00%
+       3        0.88%    0.00%
+       4        0.64%    0.16%
+       5        0.33%    0.00%
+       6        0.00%    0.00%
+       7        0.63%    0.00%
+       8        0.30%    0.00%
+       9       20.19%    0.00%
+      10       23.24%    0.00%
+      11        2.22%    0.00%
+      12        0.49%    0.00%
+      13        1.10%    0.00%
+      14        0.00%    0.00%
+      15        0.00%    0.00%
+      16        0.00%    0.00%
+      17        1.70%    0.00%
+      18        0.80%    0.00%
+      19        0.33%    0.00%
+      20        0.00%    0.00%
+      21        0.16%    0.00%
+      22        0.00%    0.00%
+      23        0.33%    0.00%
+      24        0.17%    0.00%
+      25        1.24%    0.00%
+      26        0.64%    0.00%
+      27        1.12%    0.00%
+      28        0.82%    0.00%
+      29        0.33%    0.00%
+      30        0.14%    0.00%
+      31        0.00%    0.00%
+      32        0.00%    0.00%
+
+Delta (pointerlike - garbage): 3.22%
+Best distance 1 delta: 40.15%
+=> DMP behavior likely due to cache behavior
