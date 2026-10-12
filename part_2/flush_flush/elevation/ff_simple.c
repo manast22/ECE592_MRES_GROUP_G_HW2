@@ -1,4 +1,4 @@
-
+//gcc -O0 -march=native -pthread ff_simple.c -o ff_simple
 
 #include <stdio.h>
 #include <stdint.h>
@@ -102,7 +102,7 @@ int main(void) {
     fprintf(file, "latency,prediction,actual\n");
 
 
-    const int N = 10000, WARMUP = 1000; //set training samples and test samples
+    const int N = 50000, WARMUP = 50000; //set training samples and test samples
     uint64_t train_start = __rdtsc();
     uint64_t train_times[N]; int train_touched[N]; //est data sets for training times and predetermined cached/uncached
     collect(train_times, train_touched, N, WARMUP); //set these data sets for usage
