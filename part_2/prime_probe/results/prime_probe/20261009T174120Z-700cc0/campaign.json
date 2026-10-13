@@ -1,0 +1,114 @@
+[
+  {
+    "status": "collected",
+    "reason": null,
+    "archive": "/home/sbanaka/ece-project2-prime-probe/20261009T174120Z-700cc0/sunbird.tar.gz",
+    "cpu": 0,
+    "l1d": {
+      "ways": 8,
+      "sets": 64,
+      "line_bytes": 64,
+      "capacity_bytes": 32768
+    },
+    "transfer_verified": true,
+    "host": "sunbird"
+  },
+  {
+    "status": "unsupported",
+    "reason": "This implementation uses x86 LFENCE/RDTSC/RDTSCP; no ARM timer substitution was made. The simple page-offset mapping also needs separate validation on this geometry.",
+    "archive": "/home/sbanaka/ece-project2-prime-probe/20261009T174120Z-700cc0/thunderbird.tar.gz",
+    "cpu": 0,
+    "l1d": {
+      "ways": 4,
+      "sets": 256,
+      "line_bytes": 64,
+      "capacity_bytes": 65536
+    },
+    "transfer_verified": true,
+    "host": "thunderbird"
+  },
+  {
+    "status": "collected",
+    "reason": null,
+    "archive": "/home/sbanaka/ece-project2-prime-probe/20261009T174120Z-700cc0/skylark.tar.gz",
+    "cpu": 0,
+    "l1d": {
+      "ways": 8,
+      "sets": 64,
+      "line_bytes": 64,
+      "capacity_bytes": 32768
+    },
+    "transfer_verified": true,
+    "host": "skylark"
+  },
+  {
+    "status": "collected",
+    "reason": null,
+    "archive": "/home/sbanaka/ece-project2-prime-probe/20261009T174120Z-700cc0/artemisia.tar.gz",
+    "cpu": 0,
+    "l1d": {
+      "ways": 12,
+      "sets": 64,
+      "line_bytes": 64,
+      "capacity_bytes": 49152
+    },
+    "transfer_verified": true,
+    "host": "artemisia"
+  },
+  {
+    "status": "collected",
+    "reason": null,
+    "archive": "/home/sbanaka/ece-project2-prime-probe/20261009T174120Z-700cc0/charnwood.tar.gz",
+    "cpu": 0,
+    "l1d": {
+      "ways": 8,
+      "sets": 64,
+      "line_bytes": 64,
+      "capacity_bytes": 32768
+    },
+    "transfer_verified": true,
+    "host": "charnwood"
+  },
+  {
+    "status": "collected",
+    "reason": null,
+    "archive": "/home/sbanaka/ece-project2-prime-probe/20261009T174120Z-700cc0/crux.tar.gz",
+    "cpu": 0,
+    "l1d": {
+      "ways": 8,
+      "sets": 64,
+      "line_bytes": 64,
+      "capacity_bytes": 32768
+    },
+    "transfer_verified": true,
+    "host": "crux"
+  },
+  {
+    "status": "collected",
+    "reason": null,
+    "archive": "/home/sbanaka/ece-project2-prime-probe/20261009T174120Z-700cc0/ookay.tar.gz",
+    "cpu": 0,
+    "l1d": {
+      "ways": 8,
+      "sets": 64,
+      "line_bytes": 64,
+      "capacity_bytes": 32768
+    },
+    "transfer_verified": true,
+    "host": "ookay"
+  },
+  {
+    "status": "collected",
+    "reason": null,
+    "archive": "/home/sbanaka/ece-project2-prime-probe/20261009T174120Z-700cc0/upgrade.tar.gz",
+    "cpu": 0,
+    "l1d": {
+      "ways": 8,
+      "sets": 64,
+      "line_bytes": 64,
+      "capacity_bytes": 32768
+    },
+    "transfer_verified": true,
+    "host": "upgrade"
+  }
+]
